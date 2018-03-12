@@ -1,0 +1,170 @@
+@charset "UTF-8";
+.adapter(@deviceWidth) {
+  @media (min-width: @deviceWidth) {
+    html {
+      font-size: round(@deviceWidth/15, 2);
+    }
+  }
+}
+
+@num: 50;
+.adapter(320px);
+.adapter(360px);
+.adapter(375px);
+.adapter(384px);
+.adapter(400px);
+.adapter(414px);
+.adapter(424px);
+.adapter(480px);
+.adapter(540px);
+.adapter(580px);
+.adapter(620px);
+.adapter(660px);
+.adapter(690px);
+.adapter(720px);
+.adapter(750px);
+* {
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+select {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: #fff;
+  outline: 0;
+}
+
+input {
+  border: 0;
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.title {
+  width: 100%;
+  height: 402rem/@num;
+  background-color: #F993A6;
+  position: relative;
+  color: white;
+  .name {
+    position: absolute;
+    border-radius: 50%;
+    width: 320rem/@num;
+    height: 320rem/@num;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 320rem/@num;
+    border: 5rem/@num solid #ffffff;
+
+  }
+  .explain {
+    position: absolute;
+    top: 10rem/@num;
+    right: 10rem/@num;
+    font-size: 24rem/@num;
+    font-family: "PingFang-SC-Medium";
+    img {
+      width: 23rem/@num;
+      height: 23rem/@num;
+      padding-right: 10rem/@num;
+      vertical-align: middle;
+      padding-bottom: 5rem/@num;
+    }
+  }
+}
+
+.content {
+  margin-top: 130rem/@num;
+  margin-bottom: 300rem/@num;
+  text-align: center;
+  input {
+    width: 425rem/@num;
+    height: 60rem/@num;
+    border-radius: 15rem/@num;
+    border: 1px solid #999;
+    padding-left: 20rem/@num;
+    box-sizing: border-box;
+  }
+  p {
+    font-size: 30rem/@num;
+  }
+}
+
+.inquire {
+  text-align: center;
+  button {
+    outline: none;
+    border: none;
+    border-radius: 15rem/@num;
+    color: white;
+    height: 83rem/@num;
+    width: 730rem/@num;
+    background-color: #F993A6;
+  }
+}
+
+.period {
+  max-width: 750px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 32rem/@num;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9900;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  text-align: center;
+  display: none;
+
+  .all {
+    width: 92%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20rem/@num;
+  }
+
+  .box {
+    height: 350rem/@num;
+    overflow: scroll;
+    .line {
+      width: 100%;
+      display: block;
+      position: absolute;
+      height: 70rem/@num;
+      border-top: 1px solid #F993A6;
+      border-bottom: 1px solid #F993A6;
+      bottom: 230rem/@num;
+      left: 0;
+      z-index: 9999;
+      color: transparent;
+    }
+  }
+  ul, .no {
+    border-radius: 10rem/@num;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  .no {
+    margin-top: 20rem/@num;
+  }
+
+  li, span {
+    line-height: 70rem/@num;
+    display: block;
+    height: 70rem/@num;
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/weight.css">
+    <script src="lib/jquery.js"></script>
+    <title>孕妈体重测试</title>
+</head>
+<body>
+<div class="container">
+    <div class="main">
+        <div class="content">
+            <div class="box">
+                <input type="text" placeholder="身高" id="height">
+                <span>单位：cm</span>
+            </div>
+            <i></i>
+            <div class="box">
+                <input type="text" placeholder="孕前体重" id="weight">
+                <span> 体重：kg</span>
+            </div>
+        </div>
+        <button class="result">查看结果</button>
+        <div class="text">
+            <p>体重指数BMI
+                <br>BMI<18.5,孕前体型标准
+                <br>18.5≤BMI≤23.9,孕前体型标准
+                <br>BMI≥23.9,孕前体型偏胖
+            </p>
+            <p>孕前胖瘦度
+                <br>数值为负是偏瘦，数值为正是偏胖。
+                <br>数值越接近0，体重越标准。
+                <br>数值超过20%要特别注意。
+            </p>
+            <p>整个孕期的理想增重
+                <br>偏瘦型的准妈妈，整个孕期的理想增重为12~15kg。
+                体型标准的准妈妈增长12kg左右。体重偏胖的准妈妈孕期增长7~10kg左右。</p>
+            <p>孕妇体重增加的“速度”与“重量”一样重要。在怀孕的头3个月中，体重应增加1~2公斤；在之后4~9个月中，每周体重应增加0.5公斤左右。</p>
+            <p>要在头3个月中体重增加不够的话，那么看看你是否有失眠或厌食，如果其他都正常，那就不必为体重增加不足而担心。</p>
+            <p>体型偏胖的准妈妈，在4~9个月时，体重增长要有所控制，以接近理想增长为佳。如果怀疑体重增长异常，应以医生的建议为准。</p>
+        </div>
+    </div>
+    <div class="shade"></div>
+    <div class="mode">
+        <h3>孕妈体重计算结果</h3>
+        <div class="data">
+        <!--渲染-->
+        </div>
+        <p>以上数据仅供参考</p>
+        <button class="know">我知道啦</button>
+    </div>
+</div>
+<script type="text/html" id="tpl">
+    <p>孕期标准体重：<span>59.29</span>kg</p>
+    <p>体重BMI指数为：<span>{{bmi}}</span><span> </span><span>{{body}}</span></p>
+    <p>孕期胖瘦度：<span>16.40</span>%</p>
+    <p>安产理想增重：<span>8.5</span>kg</p>
+</script>
+<script src="lib/template-web.js"></script>
+<script src="js/weight.js"></script>
+</body>
+</html>

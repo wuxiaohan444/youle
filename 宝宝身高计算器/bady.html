@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>宝宝身高测试工具</title>
+    <link rel="stylesheet" href="css/baby.css">
+    <script src="lib/jquery.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="head"></div>
+    <div class="main">
+        <div class="content">
+            <div class="box">
+                <input type="text" placeholder="我的身高" id="my" value="">
+                <span>单位：cm</span>
+            </div>
+            <i></i>
+            <div class="box">
+                <input type="text" placeholder="老公身高" id="his">
+                <span>单位：cm</span>
+            </div>
+        </div>
+        <div class="sex">
+            <span>宝宝性别：</span>
+            <button>男</button>
+            <button>女</button>
+        </div>
+        <button class="result">查看结果</button>
+        <div class="text">
+            <p>人的身高和遗传有很大关系,根据爸爸妈妈的身高，可以一定程度上预测出宝宝未来的身高范围</p>
+            <p>遗传因素对宝宝身高影响不是绝对的，后天良好的生活环境对宝宝身高影响也是很重要的，本测算仅供娱乐哦</p>
+        </div>
+    </div>
+    <div class="shade"></div>
+    <div class="mode">
+        <h3>预测结果</h3>
+        <p>您的宝宝身高可能会在此范围内</p>
+        <div class="data">
+           <!--渲染-->
+        </div>
+        <button class="know">我知道啦</button>
+    </div>
+</div>
+<script type="text/html" id="tpl">
+    <span>{{front}}</span>cm~<span>{{queen}}</span>cm
+</script>
+<script src="lib/template-web.js"></script>
+<script src="js/baby.js"></script>
+</body>
+</html>
